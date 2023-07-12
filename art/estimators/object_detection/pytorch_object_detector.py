@@ -218,8 +218,8 @@ class PyTorchObjectDetector(ObjectDetectorMixin, PyTorchEstimator):
             x_tensor /= norm_factor
 
             # Set gradients
-            if not no_grad:
-                x_tensor.requires_grad = True
+            # if not no_grad:
+                # x_tensor.requires_grad = True
 
             # Apply framework-specific preprocessing
             x_preprocessed, y_preprocessed = self._apply_preprocessing(x=x_tensor, y=y_tensor, fit=fit, no_grad=no_grad)
